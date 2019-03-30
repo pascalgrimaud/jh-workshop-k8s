@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: crm-elasticsearch
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: crm-elasticsearch
+  template:
+    metadata:
+      labels:
+        app: crm-elasticsearch
+    spec:
+      volumes:
+        - name: data
+          emptyDir: {}
+      containers:
+        - name: elasticsearch
+          image: docker.elastic.co/elasticsearch/elasticsearch:6.4.3
+          ports:
+            - containerPort: 9200
+              name: http
+              protocol: TCP
+            - containerPort: 9300
+              name: transport
+              protocol: TCP
+          volumeMounts:
+            - name: data
+              mountPath: /usr/share/elasticsearch/data/
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: crm-elasticsearch
+  namespace: default
+spec:
+  selector:
+    app: crm-elasticsearch
+  ports:
+    - port: 9200
+      name: http
+      protocol: TCP
+    - port: 9300
+      name: transport
+      protocol: TCP
