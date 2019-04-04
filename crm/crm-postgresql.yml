@@ -7,7 +7,7 @@ metadata:
     app: crm-postgresql
 type: Opaque
 data:
-  postgresql-password: amFxNjA4bDk=
+  postgresql-password: dTZ6OXBhcXg=
 ---
 apiVersion: apps/v1
 kind: Deployment
