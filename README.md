@@ -5,12 +5,12 @@
 You will need to push your image to a registry. If you have not done so, use the following commands to tag and push the images:
 
 ```
-$ docker image tag accountancy eu.gcr.io/jhipster-test-208210/accountancy
-$ docker push eu.gcr.io/jhipster-test-208210/accountancy
-$ docker image tag crm eu.gcr.io/jhipster-test-208210/crm
-$ docker push eu.gcr.io/jhipster-test-208210/crm
-$ docker image tag store eu.gcr.io/jhipster-test-208210/store
-$ docker push eu.gcr.io/jhipster-test-208210/store
+$ docker image tag accountancy pascalgrimaud/accountancy
+$ docker push pascalgrimaud/accountancy
+$ docker image tag crm pascalgrimaud/crm
+$ docker push pascalgrimaud/crm
+$ docker image tag store pascalgrimaud/store
+$ docker push pascalgrimaud/store
 ```
 
 ## Deployment

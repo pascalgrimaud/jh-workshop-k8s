@@ -9,7 +9,7 @@
     "clusteredDbApps": [],
     "serviceDiscoveryType": "eureka",
     "jwtSecretKey": "MWQ3OTllOWUxODQ3ZmUxMmE4ZmFlN2I5Yzg4MTk3ZjgyZjBjZTQzOGEyMWUyMWFkZmU3YjI4YzlhNjZmNmQ5YTI4OTVmN2MwMzBmYzJkMWIxMjJkNWEzZmUyOWNjNTQ0MTA4ZA==",
-    "dockerRepositoryName": "eu.gcr.io/jhipster-test-208210",
+    "dockerRepositoryName": "pascalgrimaud",
     "dockerPushCommand": "docker push",
     "kubernetesNamespace": "default",
     "kubernetesServiceType": "LoadBalancer",
